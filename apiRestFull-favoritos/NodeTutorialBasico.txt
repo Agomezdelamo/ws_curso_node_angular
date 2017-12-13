@@ -1,0 +1,36 @@
+NODE JS es un [ENTORNO DE PROGRAMACION] O [PLATAFORMA DE DESARROLLO]
+GRACIAS AL V8, tu escribes en javascript la parte de servidor
+pero el v8 lo compila y traduce a c++, con lo que las operaciones
+en el ordenador son mucho mas rapidas, puesto que es un lenguaje más 
+facil de manejar para el ordenador
+
+una de las ventajas de node es que una conexión no bloquea la ejecucion en el servidor,
+mediante eventos con callbacks, nunca te quedas esperando, la ejecución continua.
+
+un entorno de programación tiene:
+1. sintaxis
+2. compilador que lo interpreta y ejecuta
+3. mecanismos para interactuar con el exterior(acceso a ficheros, sistema operativo, acceder a ftp, mandar mail, etc...)
+4. libreria estandar
+5. utilidades (pruebas unitarias, paquetes, interprete)
+
+*******************************************
+*******[ENTORNO DE PROGRAMACION]***********
+*******************************************
+1.1. MAQUINA VIRTUAL DE CHROME V8 se encarga de la parte 1 y 2 del entorno de programacion.
+    la maquina virtual V8 de node (escrita en c++) 
+    -LENGUAJE, tiene la gramatica javascript, 
+    -MAQUINA VIRTUAL, la compila en tiempo real, sin interprete y la ejecuta.
+1.2 NODE JS se encarga de la 3, 4 y 5.
+    -EXTERIOR, Acceder al sistema operativo
+    -CORE, Tiene las librerias estandar, clases definidas para crear un servidor, acceder a ficheros, crear sockets
+    -UTILIDADES, node package manager para instalar librerias o frameworks.
+
+*******************************************
+*******[FRAMEWORK]*************************
+*******************************************
+Nodejs tiene
+    -LENGUAJE, JS
+    -MOTOR, V8
+    -ENTORNO, MODULOS DEL CORE
+    -FRAMEWORKS, EXPRESS
