@@ -1,0 +1,25 @@
+<header id="header">
+    <div>
+        <a [routerLink]="['/']">
+            <img src="assets/img/angular_whiteTransparent.png" />
+        </a>
+        <div>
+            <h1>{{titulo}}</h1>
+            <p>{{description}}</p>
+        </div>
+        <a class="btn-add-favorito" [routerLink]="['/crearMarcador']">
+                Crear marcador
+            </a>
+    </div>
+</header>
+
+<main>
+    <!-- COMPONENTE PARA QUE EL ROUTER CAMBIE EL CACHO DE VISTA
+             DINAMICAMENTE SEGUN LA URL -->
+    <!-- esta directiva cambia el elemnto html segun la ruta especificada en el app.routing.ts-->
+    <router-outlet></router-outlet>
+</main>
+
+<footer>
+    @Curso de nodejs y angular2 de victor ruiz
+</footer>

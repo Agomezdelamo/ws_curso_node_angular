@@ -1,0 +1,20 @@
+<h2>{{titulo}}</h2>
+
+<div class="loading" *ngIf="loading">
+    <img src="../assets/img/loader.gif" alt="">
+</div>
+
+<ul>
+    <li *ngFor="let album of albums" class="album-item">
+        <div class="data">
+            <h4>{{album.title}}</h4>
+            <p>{{album.description}}</p>
+        </div>
+        <section class="buttons">
+            <button href="#" class="btn btn-ver">Ver album</button>
+            <button href="#" class="btn btn-default">Añadir fotos</button>
+            <button href="#" class="btn btn-editar">Editar</button>
+            <button href="#" class="btn btn-borrar">Eliminar</button>
+        </section>
+    </li>
+</ul>

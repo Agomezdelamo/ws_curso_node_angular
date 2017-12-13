@@ -1,0 +1,12 @@
+{{title}}
+
+<article>
+    <input (blur)="changeColor()" [(ngModel)]="color" />
+</article>
+el color es {{esteColor}}
+<div class="container" [style.background]="favoritosVisibles? color : 'black'" [ngClass]="favoritosVisibles?'blue':'red'">
+    <ul id="favoritos" *ngIf="favoritosVisibles">
+        <li *ngFor="let url of favoritos"> {{url}} </li>
+    </ul>
+    <button (click)="showFavoritos()">Ver urls favoritas</button>
+</div>

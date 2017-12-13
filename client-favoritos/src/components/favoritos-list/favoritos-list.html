@@ -1,0 +1,34 @@
+<div class="loading" *ngIf="loading">
+    <img src="../assets/img/loader.gif" alt="" />
+</div>
+<ul class="containerFavoritos">
+    <li *ngFor="let favorito of favoritos" class="favorito-item">
+        <section class="content-data">
+            <h4>
+                {{favorito.title}}
+            </h4>
+            <p>
+                {{favorito.description}}
+            </p>
+        </section>
+        <section class=" buttons ">
+
+            <a [href]='favorito.url'>Ir al favorito</a>
+            <button class="btn-editar " [routerLink]="['/editMarcador', favorito._id]">Editar</button>
+            <!-- navegamos a una url con un parametro, el favorito._id -->
+            <button class="btn-ver " [routerLink]="['/marcador',favorito._id]">Ver</button>
+            <button class="btn-borrar " (click)="onDeleteConfirm(favorito._id)">Borrar</button>
+            <div class="modalDialog" *ngIf="confirmado == favorito._id">
+                <strong>¿Estas seguro de querer borrar el marcador "{{favorito.title}}"?</strong>
+                <div>
+                    <a (click)="onDeleteFavorito(favorito._id)" class="btn btn-borrar">
+                    Eliminar
+                    </a>
+                    <a (click)="onCancelConfirm(favorito._id)" class="btn btn-ver">
+                        Cancelar
+                    </a>
+                </div>
+            </div>
+        </section>
+    </li>
+</ul>
